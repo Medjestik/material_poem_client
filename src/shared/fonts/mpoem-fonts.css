@@ -1,0 +1,52 @@
+/* Cormorant Garamond — макет M.POEM */
+@font-face {
+	font-family: 'Cormorant Garamond';
+	src: url('./Cormorant_Garamond/static/CormorantGaramond-Regular.ttf')
+		format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Cormorant Garamond';
+	src: url('./Cormorant_Garamond/static/CormorantGaramond-Medium.ttf')
+		format('truetype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Cormorant Garamond';
+	src: url('./Cormorant_Garamond/static/CormorantGaramond-Italic.ttf')
+		format('truetype');
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+
+/* Manrope — макет M.POEM */
+@font-face {
+	font-family: 'Manrope';
+	src: url('./Manrope/static/Manrope-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Manrope';
+	src: url('./Manrope/static/Manrope-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Manrope';
+	src: url('./Manrope/static/Manrope-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}

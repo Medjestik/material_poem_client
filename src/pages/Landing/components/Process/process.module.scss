@@ -1,0 +1,152 @@
+.section {
+	flex-shrink: 0;
+	background-color: var(--mpoem-paper);
+}
+
+.inner {
+	composes: mpoem-container from global;
+	display: flex;
+	flex-direction: row;
+	gap: 104px;
+	align-items: flex-start;
+	justify-content: flex-start;
+	padding-block: 100px;
+}
+
+.intro {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	gap: 38px;
+	width: 604px;
+	max-width: 100%;
+}
+
+.heading {
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+}
+
+.eyebrow {
+	margin: 0;
+	color: var(--mpoem-muted);
+	font-weight: 500;
+	font-size: 11px;
+	font-family: var(--mpoem-font-sans);
+	line-height: 16px;
+	letter-spacing: 0.16em;
+}
+
+.title {
+	margin: 0;
+	color: var(--mpoem-ink);
+	font-weight: 400;
+	font-size: 64px;
+	font-family: var(--mpoem-font-serif);
+	line-height: 67px;
+	white-space: pre-line;
+}
+
+.lead {
+	margin: 0;
+	max-width: 585px;
+	color: var(--mpoem-muted);
+	font-weight: 400;
+	font-size: 16px;
+	font-family: var(--mpoem-font-sans);
+	line-height: 25px;
+}
+
+.cta {
+	width: 270px;
+	max-width: 100%;
+}
+
+.steps {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	gap: 0;
+	width: 604px;
+	max-width: 100%;
+}
+
+.step {
+	display: flex;
+	flex-direction: row;
+	gap: 24px;
+	align-items: flex-start;
+	padding: 25px 0;
+	border-top: 1px solid var(--mpoem-line);
+}
+
+.number {
+	flex-shrink: 0;
+	width: 60px;
+	color: var(--mpoem-clay);
+	font-weight: 400;
+	font-size: 44px;
+	font-family: var(--mpoem-font-serif);
+	line-height: 50px;
+}
+
+.stepBody {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 0;
+	gap: 10px;
+	min-width: 0;
+	max-width: 520px;
+}
+
+.stepTitle {
+	margin: 0;
+	color: var(--mpoem-ink);
+	font-weight: 400;
+	font-size: 33px;
+	font-family: var(--mpoem-font-serif);
+	line-height: 38px;
+}
+
+.stepText {
+	margin: 0;
+	color: var(--mpoem-muted);
+	font-weight: 400;
+	font-size: 14px;
+	font-family: var(--mpoem-font-sans);
+	line-height: 23px;
+}
+
+@media (max-width: 1100px) {
+	.inner {
+		flex-direction: column;
+		gap: 48px;
+	}
+
+	.intro,
+	.steps {
+		width: 100%;
+	}
+
+	.title {
+		font-size: clamp(40px, 8vw, 64px);
+		line-height: 1.05;
+	}
+
+	.stepTitle {
+		font-size: clamp(26px, 5vw, 33px);
+		line-height: 1.15;
+	}
+}
+
+@media (max-width: 720px) {
+	.inner {
+		padding-block: 58px;
+		gap: 42px;
+	}
+
+	.title {
+		font-size: 36px;
+	}
+}

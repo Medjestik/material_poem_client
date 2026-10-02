@@ -1,0 +1,154 @@
+.section {
+	flex-shrink: 0;
+	background-color: var(--mpoem-pale);
+}
+
+.inner {
+	composes: mpoem-container from global;
+	display: flex;
+	flex-direction: row;
+	gap: 104px;
+	align-items: center;
+	justify-content: flex-start;
+	padding-block: 88px;
+}
+
+.visual {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	gap: 16px;
+	width: 604px;
+	max-width: 100%;
+}
+
+.image {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 604 / 695;
+	object-fit: cover;
+}
+
+.caption {
+	margin: 0;
+	width: 100%;
+	color: var(--mpoem-muted);
+	font-weight: 500;
+	font-size: 9px;
+	font-family: var(--mpoem-font-sans);
+	line-height: 14px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	gap: 28px;
+	width: 604px;
+	max-width: 100%;
+}
+
+.heading {
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+}
+
+.eyebrow {
+	margin: 0;
+	color: var(--mpoem-muted);
+	font-weight: 500;
+	font-size: 11px;
+	font-family: var(--mpoem-font-sans);
+	line-height: 16px;
+	letter-spacing: 0.16em;
+}
+
+.title {
+	margin: 0;
+	color: var(--mpoem-ink);
+	font-weight: 400;
+	font-size: 64px;
+	font-family: var(--mpoem-font-serif);
+	line-height: 67px;
+	white-space: pre-line;
+}
+
+.text {
+	margin: 0;
+	max-width: 550px;
+	color: var(--mpoem-muted);
+	font-weight: 400;
+	font-size: 16px;
+	font-family: var(--mpoem-font-sans);
+	line-height: 27px;
+}
+
+.terms {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	width: 100%;
+	max-width: 550px;
+	padding-top: 24px;
+	border-top: 1px solid var(--mpoem-line);
+}
+
+.termsTitle {
+	margin: 0;
+	color: var(--mpoem-ink);
+	font-weight: 400;
+	font-size: 29px;
+	font-family: var(--mpoem-font-serif);
+	line-height: 35px;
+}
+
+.termsText {
+	margin: 0;
+	color: var(--mpoem-muted);
+	font-weight: 400;
+	font-size: 14px;
+	font-family: var(--mpoem-font-sans);
+	line-height: 24px;
+}
+
+.cta {
+	width: 360px;
+	max-width: 100%;
+}
+
+@media (max-width: 1100px) {
+	.inner {
+		flex-direction: column;
+		gap: 48px;
+		align-items: stretch;
+	}
+
+	.visual,
+	.content {
+		width: 100%;
+	}
+
+	.title {
+		font-size: clamp(40px, 8vw, 64px);
+		line-height: 1.05;
+	}
+
+	.cta {
+		width: 100%;
+	}
+}
+
+@media (max-width: 720px) {
+	.inner {
+		padding-block: 48px 58px;
+		gap: 38px;
+	}
+
+	.title {
+		font-size: 36px;
+	}
+}

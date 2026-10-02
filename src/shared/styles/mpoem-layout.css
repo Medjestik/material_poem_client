@@ -1,0 +1,21 @@
+/**
+ * M.POEM public site: единая сетка 1440px (поля 64px внутри max-width).
+ * Подключать через SiteLayout — padding-inline не увеличивает ширину блока.
+ */
+[data-mpoem-site] {
+	box-sizing: border-box;
+	width: 100%;
+}
+
+[data-mpoem-site] *,
+[data-mpoem-site] *::before,
+[data-mpoem-site] *::after {
+	box-sizing: inherit;
+}
+
+.mpoem-container {
+	width: 100%;
+	max-width: var(--mpoem-container);
+	margin-inline: auto;
+	padding-inline: var(--mpoem-gutter);
+}

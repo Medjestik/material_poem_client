@@ -1,0 +1,29 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 28px;
+	align-items: flex-start;
+	justify-content: flex-start;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 600px;
+	margin: 0;
+}
+
+.title {
+	margin: 0;
+	color: var(--mpoem-ink);
+	font-weight: 400;
+	font-size: 39px;
+	font-family: var(--mpoem-font-serif);
+	line-height: 44px;
+}
+
+.lead {
+	margin: 0;
+	color: var(--mpoem-muted);
+	font-weight: 400;
+	font-size: 13px;
+	font-family: var(--mpoem-font-sans);
+	line-height: 22px;
+}

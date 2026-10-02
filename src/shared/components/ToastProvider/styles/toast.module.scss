@@ -1,0 +1,162 @@
+.container {
+	position: fixed;
+
+	right: 24px;
+	bottom: 24px;
+
+	z-index: 9999;
+
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.toast {
+	position: relative;
+
+	width: 380px;
+	padding: 20px 44px 20px 20px;
+
+	box-sizing: border-box;
+
+	display: flex;
+	gap: 10px;
+
+	border: 1px solid var(--border-color);
+	border-radius: var(--border-radius);
+
+	background: var(--background-white-color);
+
+	box-shadow: 0 8px 24px rgb(34 34 34 / 10%);
+
+	animation: slideIn 0.25s ease forwards;
+
+	&_type_success {
+		border-color: var(--success-color);
+	}
+
+	&_type_error {
+		border-color: var(--error-color);
+	}
+
+	&_type_warning {
+		border-color: var(--warning-color);
+	}
+
+	&_type_info {
+		border-color: var(--accent-color);
+	}
+}
+
+.close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+
+	width: 20px;
+	height: 20px;
+
+	margin: 0;
+	padding: 0;
+
+	border: none;
+	outline: none;
+
+	background-color: transparent;
+	background-image: url('../../../../shared/images/icons/close.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 14px;
+
+	opacity: 0.45;
+
+	transition: opacity 0.2s ease;
+
+	&:hover {
+		cursor: pointer;
+		opacity: 0.8;
+	}
+}
+
+.icon {
+	flex: 0 0 18px;
+
+	width: 18px;
+	height: 18px;
+
+	margin-top: 1px;
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.toast_type_success .icon {
+	background-image: url('../../../images/icons/buttons/check-green.svg');
+}
+
+.toast_type_warning .icon {
+	background-image: url('../../../images/icons/buttons/warning-yellow.svg');
+}
+
+.toast_type_info .icon {
+	background-image: url('../../../images/icons/buttons/info-blue.svg');
+}
+
+.toast_type_error .icon {
+	background-image: url('../../../images/icons/buttons/close-red.svg');
+}
+
+.content {
+	width: 100%;
+
+	margin: 0;
+
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.title {
+	margin: 0;
+
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+
+	color: var(--text-primary-color);
+}
+
+.text {
+	margin: 0;
+
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 18px;
+
+	color: var(--text-secondary-color);
+}
+
+@keyframes slideIn {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@media (max-width: 600px) {
+	.container {
+		right: 16px;
+		bottom: 16px;
+		left: 16px;
+	}
+
+	.toast {
+		width: 100%;
+	}
+}

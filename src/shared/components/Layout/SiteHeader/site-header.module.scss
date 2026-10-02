@@ -1,0 +1,163 @@
+.header {
+	border-bottom: 1px solid var(--mpoem-line);
+	background-color: var(--mpoem-paper);
+}
+
+.inner {
+	composes: mpoem-container from global;
+	display: flex;
+	flex-direction: row;
+	gap: 0;
+	align-items: center;
+	justify-content: space-between;
+	padding-block: 22px;
+}
+
+.logo {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	gap: 2px;
+	width: 214px;
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.logoTitle {
+	font-weight: 400;
+	font-size: 34px;
+	font-family: var(--mpoem-font-serif);
+	line-height: 35px;
+	letter-spacing: 0.04em;
+}
+
+.logoSubtitle {
+	font-weight: 500;
+	font-size: 8px;
+	font-family: var(--mpoem-font-sans);
+	line-height: 13px;
+	letter-spacing: 0.35em;
+}
+
+.nav {
+	display: flex;
+	flex-shrink: 0;
+	justify-content: center;
+	gap: 32px;
+}
+
+.navLink {
+	color: var(--mpoem-ink);
+	font-weight: 400;
+	font-size: 13px;
+	font-family: var(--mpoem-font-sans);
+	line-height: 20px;
+	text-decoration: none;
+	cursor: pointer;
+
+	&:hover {
+		color: var(--mpoem-clay);
+	}
+}
+
+.actions {
+	display: flex;
+	flex-shrink: 0;
+	align-items: center;
+}
+
+.menuButton {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	gap: 6px;
+	width: 44px;
+	height: 44px;
+	border: 1px solid var(--mpoem-line);
+	background: transparent;
+	cursor: pointer;
+
+	span {
+		display: block;
+		width: 20px;
+		height: 1px;
+		margin: 0 auto;
+		background: var(--mpoem-ink);
+		transition: transform 0.2s ease;
+	}
+}
+
+.menuButton_open span:first-child {
+	transform: translateY(3.5px) rotate(45deg);
+}
+
+.menuButton_open span:last-child {
+	transform: translateY(-3.5px) rotate(-45deg);
+}
+
+.mobileMenu {
+	display: none;
+}
+
+@media (max-width: 1100px) {
+	.inner {
+		flex-wrap: wrap;
+	}
+
+	.nav,
+	.actions {
+		display: none;
+	}
+
+	.logo {
+		width: auto;
+	}
+
+	.menuButton,
+	.mobileMenu {
+		display: flex;
+	}
+
+	.mobileMenu {
+		position: fixed;
+		inset: 56px 0 0;
+		z-index: 100;
+		padding: var(--mpoem-gutter);
+		background: var(--mpoem-paper);
+	}
+
+	.mobileNav {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.mobileLink {
+		color: var(--mpoem-ink);
+		font-size: 24px;
+		font-family: var(--mpoem-font-serif);
+		text-decoration: none;
+		cursor: pointer;
+	}
+}
+
+@media (max-width: 720px) {
+	.inner {
+		padding-block: 20px;
+	}
+
+	.logoTitle {
+		font-size: 26px;
+		line-height: 30px;
+	}
+
+	.logoSubtitle {
+		letter-spacing: 0.22em;
+	}
+
+	.mobileMenu {
+		inset: 72px 0 0;
+		padding: 24px;
+	}
+}

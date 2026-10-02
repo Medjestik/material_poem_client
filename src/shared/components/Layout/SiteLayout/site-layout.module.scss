@@ -1,0 +1,12 @@
+.layout {
+	min-height: 100vh;
+	background: var(--mpoem-paper);
+	color: var(--mpoem-ink);
+	font-family: var(--mpoem-font-sans);
+}
+
+.main {
+	width: 100%;
+	max-width: 100%;
+	overflow-x: clip;
+}

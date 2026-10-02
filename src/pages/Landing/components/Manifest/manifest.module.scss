@@ -1,0 +1,81 @@
+.manifest {
+	background-color: var(--mpoem-pale);
+}
+
+.inner {
+	composes: mpoem-container from global;
+	display: flex;
+	flex-direction: row;
+	gap: 60px;
+	align-items: center;
+	justify-content: flex-start;
+	padding-block: 40px 44px;
+}
+
+.label {
+	flex-shrink: 0;
+	width: 352px;
+	margin: 0;
+	color: var(--mpoem-muted);
+	font-weight: 500;
+	font-size: 11px;
+	font-family: var(--mpoem-font-sans);
+	font-style: normal;
+	line-height: 16px;
+	letter-spacing: 1.6px;
+	text-align: left;
+	white-space: pre-wrap;
+}
+
+.text {
+	flex-shrink: 0;
+	width: 808px;
+	max-width: 100%;
+	margin: 0;
+	color: var(--mpoem-ink);
+	font-weight: 400;
+	font-size: 45px;
+	font-family: var(--mpoem-font-serif);
+	font-style: normal;
+	line-height: 49px;
+	letter-spacing: 0;
+	text-align: left;
+	white-space: pre-wrap;
+}
+
+.icon {
+	display: flex;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: center;
+	width: 28px;
+	height: 28px;
+}
+
+@media (max-width: 1100px) {
+	.inner {
+		flex-wrap: wrap;
+		gap: 32px;
+	}
+
+	.label {
+		width: 100%;
+	}
+
+	.text {
+		width: 100%;
+		font-size: clamp(32px, 6vw, 45px);
+		line-height: 1.1;
+	}
+}
+
+@media (max-width: 720px) {
+	.inner {
+		padding-block: 36px 44px;
+		gap: 20px;
+	}
+
+	.text {
+		font-size: 28px;
+	}
+}
